@@ -122,4 +122,3 @@ The application is built with responsiveness in mind, utilizing modern CSS techn
 ## Author
 
 Vivek Madabhavi
-[vivekmadabhavi@example.com - Optional]
