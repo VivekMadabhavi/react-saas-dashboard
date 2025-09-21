@@ -44,8 +44,8 @@ Ensure you have the following installed:
 
 1.  **Clone the repository:**
     ```bash
-    git clone https://github.com/YOUR_USERNAME/YOUR_REPOSITORY_NAME.git
-    cd YOUR_REPOSITORY_NAME
+    git clone https://github.com/VivekMadabhavi/react-saas-dashboard.git
+    cd react-saas-dashboard
     ```
     (Remember to replace `YOUR_USERNAME/YOUR_REPOSITORY_NAME` with your actual GitHub repository details.)
 
@@ -68,7 +68,7 @@ The application will typically open in your browser at `http://localhost:5173` (
 
 The application is deployed and accessible at:
 
-[YOUR_NETLIFY_DEPLOYMENT_LINK_HERE]
+https://react-dashboard-saa.netlify.app/
 
 (Please replace `[YOUR_NETLIFY_DEPLOYMENT_LINK_HERE]` with the actual link to your deployed application on Netlify.)
 
