@@ -1,0 +1,172 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Inter", ui-sans-serif, system-ui, sans-serif;
+  box-sizing: border-box;
+}
+
+html.light {
+  background-color: white;
+  color: black;
+}
+
+html.dark {
+  background-color: #1a202c;
+  color: white;
+}
+
+.sidebar-link {
+  display: block;
+  padding: 8px 16px;
+  border-radius: 4px;
+  transition: background-color 0.2s ease-in-out;
+  color: white;
+}
+
+.sidebar-link:hover {
+  background-color: #4a5568; /* gray-700 equivalent */
+}
+
+.sidebar-active-link {
+  display: block;
+  padding: 8px 16px;
+  border-radius: 4px;
+  background-color: #2563eb; /* blue-600 equivalent */
+  color: white;
+}
+
+.light-sidebar-bg {
+  background-color: #ffffff;
+}
+
+.dark-sidebar-bg {
+  background-color: #1f2937;
+}
+
+.sidebar-container {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  width: 256px;
+  padding: 16px;
+  z-index: 50;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto; /* Enable scrolling for left sidebar */
+  /* transform property is now handled by framer-motion in Sidebar.tsx */
+  /* transition property is now handled by framer-motion in Sidebar.tsx */
+}
+
+.main-content-area {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  transition: margin-left 0.3s ease-in-out, margin-right 0.3s ease-in-out; /* Add transition for right margin */
+  margin-left: 0px; /* Default margin, controlled by DefaultLayout.tsx */
+  margin-right: 0px; /* Default margin, controlled by DefaultLayout.tsx */
+}
+
+.sidebar-toggle-button {
+  display: block; /* Make left sidebar toggle button visible */
+}
+
+.right-sidebar-toggle-button {
+  display: block; /* Make right sidebar toggle button visible */
+}
+
+.sidebar-overlay-md-hidden {
+  display: block; /* Re-enable overlay for small screens */
+}
+
+.right-sidebar-container {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 300px;
+  z-index: 49; /* Below left sidebar, above main content */
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto; /* Enable scrolling for right sidebar */
+  /* transform property is now handled by framer-motion in RightSidebar.tsx */
+  /* transition property is now handled by framer-motion in RightSidebar.tsx */
+}
+
+@media (min-width: 768px) {
+  .md\:block {
+    display: block;
+  }
+
+  .md\:fixed {
+    position: fixed;
+  }
+
+  .md\:translate-x-0 {
+    transform: translateX(0);
+  }
+
+  /* Sidebar and main content margins are dynamically controlled by DefaultLayout.tsx states */
+  .sidebar-toggle-button {
+    display: block; /* Keep toggle button visible on large screens too */
+  }
+
+  .right-sidebar-toggle-button {
+    display: block; /* Keep toggle button visible on large screens too */
+  }
+
+  .sidebar-overlay-md-hidden {
+    display: none; /* Hide overlay on large screens */
+  }
+}
+
+@media (max-width: 767px) {
+  /* Left and right sidebars are hidden by default and toggleable on small screens */
+  .sidebar-container {
+    /* transform controlled by framer-motion */
+  }
+
+  .right-sidebar-container {
+    /* transform controlled by framer-motion */
+  }
+
+  .main-content-area {
+    margin-left: 0px; /* No left margin when left sidebar is closed */
+    margin-right: 0px; /* No right margin when right sidebar is closed */
+  }
+
+  .sidebar-toggle-button {
+    display: block; /* Show left sidebar toggle button on small screens */
+    margin-right: 8px; /* Adjust margin for visibility */
+  }
+
+  .right-sidebar-toggle-button {
+    display: block; /* Show right sidebar toggle button on small screens */
+    margin-left: 8px; /* Adjust margin for visibility */
+  }
+
+  .navbar-controls-group {
+    gap: 8px; /* Reduce gap between elements on small screens */
+  }
+
+  .sidebar-overlay-md-hidden {
+    display: block; /* Show overlay on small screens */
+  }
+
+  /* Existing pagination controls remain */
+}
+
+.dashboard-grid-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 16px;
+  margin-bottom: 32px;
+}
+
+.dashboard-grid-charts {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 16px;
+  margin-bottom: 32px;
+}
