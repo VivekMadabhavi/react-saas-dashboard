@@ -70,7 +70,8 @@ The application is deployed and accessible at:
 
 https://react-dashboard-saa.netlify.app/
 
-(Please replace `[YOUR_NETLIFY_DEPLOYMENT_LINK_HERE]` with the actual link to your deployed application on Netlify.)
+## Video Recording Link
+https://www.loom.com/share/3490488f1fd0481a81c3c8d653ccb929
 
 ## Design Decisions, Implementations, and Challenges
 
@@ -120,5 +121,5 @@ The application is built with responsiveness in mind, utilizing modern CSS techn
 
 ## Author
 
-[Your Name]
-[Your Email/LinkedIn Profile - Optional]
+Vivek Madabhavi
+[vivekmadabhavi@example.com - Optional]
