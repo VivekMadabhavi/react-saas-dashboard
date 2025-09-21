@@ -90,7 +90,7 @@ const RightSidebar: React.FC<RightSidebarProps> = ({ isOpen, toggleSidebar }) =>
         padding: '24px',
         backgroundColor: isDarkMode ? '#1f2937' : '#ffffff',
         color: isDarkMode ? 'white' : '#1f2937',
-        overflowY: 'auto',
+        overflowY: 'auto', // Re-enable scrolling
         borderLeft: isDarkMode ? '1px solid #374151' : '1px solid #e5e7eb',
         position: 'fixed', // Ensure it's fixed for sliding
         top: 0,
